@@ -60,7 +60,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "UsuarioApi", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Usuario", Version = "v1" });
     //Fazendo a criação do botão Authorization no swagger
     c.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, new OpenApiSecurityScheme()
     {
