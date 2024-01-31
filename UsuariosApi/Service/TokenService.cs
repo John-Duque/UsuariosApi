@@ -24,7 +24,7 @@ namespace UsuariosApi.Service
 
             JwtSecurityToken token = new JwtSecurityToken
                 (
-                expires: DateTime.Now.AddMinutes(10),
+                expires: DateTime.Now.AddMinutes(60),
                 claims: claims,
                 signingCredentials: signingCredentials
                 );

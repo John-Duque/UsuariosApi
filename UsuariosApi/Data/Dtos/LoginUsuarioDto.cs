@@ -1,9 +1,8 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace UsuariosApi.Data.Dtos
 {
-	public class LoginUsuarioDto
+    public class LoginUsuarioDto
 	{
 		[Required]
 		public string UserName { get; set; }

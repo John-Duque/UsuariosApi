@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using UsuariosApi.Data.Dtos;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,9 +17,9 @@ namespace UsuariosApi.Controllers
         // GET: api/values
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
-        public IActionResult Get()
+        public ActionResult<RetornoDto> Get()
         {
-            return Ok("Acesso Permitido!");
+            return Ok(new RetornoDto { Mensagem = "Acesso Permitido", Sucesso = true });
         }
     }
 }

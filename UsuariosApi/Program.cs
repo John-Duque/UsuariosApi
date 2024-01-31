@@ -18,7 +18,10 @@ var connectionString = builder.Configuration.GetConnectionString("UsuarioConnect
 builder.Services.AddDbContext<UsuarioDbContext>
     (opts =>
     {
-        opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)); 
+        //Todo:MySql
+        opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        //Todo: Sql Server
+        //opts.UseSqlServer(connectionString);
     });
 
 builder.Services.AddIdentity<Usuario, IdentityRole>() // Adicionar o conceito de identidade para esse usuario
